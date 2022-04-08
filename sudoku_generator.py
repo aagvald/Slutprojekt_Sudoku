@@ -2,8 +2,6 @@ import random
 
 grid = [[row, column] for row in range(9) for column in range(9)]
 
-print(grid)
-
 row_list = []
 column_list = []
 house_list = []
@@ -16,3 +14,7 @@ for i in range(9):
     row_list.append(row)
     row = []
     del grid[0:9]
+
+for i in range(9):
+    for j in row_list:
+        column_list.append(j[i])
