@@ -43,4 +43,10 @@ for row in board:
         row[i] = random.randint(1,9)
     print(row)
 
-print(board)
+house = []
+for row in board:
+    if board.index(row) < 3:
+        for i in range(3):
+            house.append(row[i])
+
+print(house)
