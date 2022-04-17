@@ -18,9 +18,10 @@ for row in board:
         
         while True:
             random_num_candidate = random.randint(1, 9)
+
             if random_num_candidate not in row:
-                row[col] = random_num_candidate
-                break
+                 row[col] = random_num_candidate
+                 break
 
     print(row)
 
