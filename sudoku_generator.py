@@ -25,4 +25,9 @@ for row in board:
 
     print(row)
 
+if board[1][0] == board[2][0]:
+    print(True)
+else:
+    print(False)
+
 print(create_house_list(board))
