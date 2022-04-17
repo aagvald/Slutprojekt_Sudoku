@@ -1,31 +1,5 @@
 import random
 
-#grid = [[row, column] for row in range(9) for column in range(9)]
-
-#row_list = []
-#column_list = []
-#house_list = []
-
-#row = []
-#for i in range(9):
-    #for j in grid:
-        #if len(row) < 9:
-            #row.append(j)
-    #row_list.append(row)
-    #row = []
-    #del grid[0:9]
-
-#for i in range(9):
-    #for j in row_list:
-        #column_list.append(j[i])
-
-#house = []
-#for i in row_list:
-    #for j in range(3):
-        #if len(house) < 9:
-            #house.append(i[j])
-    #house_list.append(house)
-
 board = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -43,10 +17,34 @@ for row in board:
         row[i] = random.randint(1,9)
     print(row)
 
-house = []
+house_list = [[], [], [], [], [], [], [], [], []]
 for row in board:
-    if board.index(row) < 3:
-        for i in range(3):
-            house.append(row[i])
-
-print(house)
+    
+    if board.index(row) < 3:  
+        for i in range(9):  
+            if i < 3:
+                house_list[0].append(row[i])
+            if 2 < i < 6:
+                house_list[1].append(row[i])
+            if 5 < i < 9:
+                house_list[2].append(row[i])
+    
+    if 2 < board.index(row) < 6:
+        for i in range(9):  
+            if i < 3:
+                house_list[3].append(row[i])
+            if 2 < i < 6:
+                house_list[4].append(row[i])
+            if 5 < i < 9:
+                house_list[5].append(row[i])
+    
+    if 5 < board.index(row) < 9:
+        for i in range(9):  
+            if i < 3:
+                house_list[6].append(row[i])
+            if 2 < i < 6:
+                house_list[7].append(row[i])
+            if 5 < i < 9:
+                house_list[8].append(row[i])
+        
+print(house_list)
