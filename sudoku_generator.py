@@ -15,7 +15,13 @@ board = [
 
 for row in board:
     for col in range(len(row)):
-        row[col] = random.randint(1,9)
+        
+        while True:
+            random_num_candidate = random.randint(1, 9)
+            if random_num_candidate not in row:
+                row[col] = random_num_candidate
+                break
+
     print(row)
 
 print(create_house_list(board))
