@@ -13,6 +13,8 @@ board = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
+column_list = [[], [], [], [], [], [], [], [], []]
+
 for row in board:
     for col in range(len(row)):
         
@@ -21,14 +23,32 @@ for row in board:
 
             if random_num_candidate not in row:
                  row[col] = random_num_candidate
+                 column_list[col].append(row[col])
                  break
 
     print(row)
 
-for i in range(9):
-    for j in range(i):
-        if board[i][0] == board[j][0] and i != j:
-            print(True)
-            print(board[i][0])
+print( )
+
+print(column_list)
+
+
+#for row in range(len(board)):
+    #for col in range(9):
+
+        #for i in range(row):
+
+            #if board[row][col] == board[i][col] != 0 and row != i:
+
+                #print(True)
+                #print(board[row][col])
+                #print(row)
+            
+
+
+print( )
+
+for row in board:
+    print(row)
 
 #print(create_house_list(board))
