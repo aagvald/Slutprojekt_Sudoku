@@ -25,4 +25,10 @@ for row in board:
 
     print(row)
 
-print(create_house_list(board))
+for i in range(9):
+    for j in range(i):
+        if board[i][0] == board[j][0] and i != j:
+            print(True)
+            print(board[i][0])
+
+#print(create_house_list(board))
