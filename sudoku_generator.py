@@ -14,53 +14,39 @@ board = [
 ]
 
 column_list = [[], [], [], [], [], [], [], [], []]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-#for row in board:
-    #for col in range(len(row)):
-        
-        #while True:
-            #random_num_candidate = random.randint(1, 9)
+for col in range(len(board[0])):
 
-            #if random_num_candidate not in row:
-                 #row[col] = random_num_candidate
-                 #column_list[col].append(row[col])
-                 #break
+    while True:
+        random_num_candidate = random.choice(numbers)
 
-    #print(row)
+        if random_num_candidate not in board[0]:
+            board[0][col] = random_num_candidate
+            break
 
-
+    numbers.remove(random_num_candidate)
+    column_list[col].append(random_num_candidate)
 
 for row in board:
-
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-    for col in range(len(row)):
-        
-        while True:
-            random_num_candidate = random.choice(numbers)
-            
-            if random_num_candidate not in column_list[col]:
-                row[col] = random_num_candidate
-                break
-            
-        column_list[col].append(row[col])
-        numbers.remove(random_num_candidate)
-
     print(row)
 
 
-#print( )
 
-#print(column_list)
+def determine_candidates(row):
+    
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    candidates_list = []
 
+    for col in range(9):
+        candidates = []
 
-#for row in range(len(board)):
-    #for col in range(9):
+        for num in numbers:
+            if num not in column_list[col] and num not in row:
+                candidates.append(num)
+        candidates_list.append(candidates)
+            
+    return candidates_list
 
-        #for i in range(row):
+print(determine_candidates(board[1]))
 
-            #if board[row][col] == board[i][col] != 0 and row != i:
-
-                #print(True)
-                #print(board[row][col])
-                #print(row)
