@@ -3,8 +3,8 @@ def create_house_list(board):
     
     for row in board:
     
-        if board.index(row) < 3:  
-            for col in range(9):  
+        if board.index(row) < 3:
+            for col in range(9):
                 if col < 3:
                     house_list[0].append(row[col])
                 if 2 < col < 6:
