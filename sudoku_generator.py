@@ -24,4 +24,13 @@ for row in range(len(board)):
 for row in board:
     print(row)
 
-print(create_house_list(board))
+house_list = create_house_list(board)
+print(house_list)
+
+#for row in range(len(board)):
+
+    #if row < 3:
+    
+    #if 2 < row < 6:
+
+    #if 5 < row < 9:
