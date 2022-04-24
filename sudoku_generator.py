@@ -23,3 +23,5 @@ for row in range(len(board)):
 
 for row in board:
     print(row)
+
+print(create_house_list(board))
