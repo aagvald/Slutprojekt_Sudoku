@@ -1,5 +1,5 @@
 import random
-from house_list_generator import create_house_list
+from house_list_generator import create_house_list, is_house_unique
 
 def is_column_unique(row, row_above):
     for col in range(len(row)):
