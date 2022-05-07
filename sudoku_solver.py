@@ -1,5 +1,5 @@
 import random
-from house_list_generator import create_house_list, identify_house_number, is_house_unique
+from house_list_generator import create_house_list, identify_house_number
 
 board = [
     [5,0,0,0,0,0,3,4,0],
