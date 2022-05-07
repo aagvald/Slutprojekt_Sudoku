@@ -1,6 +1,5 @@
 import random
-from candidate_check import candidates_already_in_column, candidates_already_in_house, candidate_removal
-from house_list_generator import create_house_list, identify_house_number
+from candidate_check import candidate_removal
 
 board = [
     [5,0,0,0,0,0,3,4,0],
