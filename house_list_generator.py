@@ -31,6 +31,32 @@ def create_house_list(board):
     return house_list
 
 
+def identify_house_number(row,col):
+    if row < 3:
+        if col < 3:
+            return 0
+        if 2 < col < 6:
+            return 1
+        if 5 < col < 9:
+            return 2
+    
+    if 2 < row < 6:
+        if col < 3:
+            return 3
+        if 2 < col < 6:
+            return 4
+        if 5 < col < 9:
+            return 5
+    
+    if 5 < row < 9:
+        if col < 3:
+            return 6
+        if 2 < col < 6:
+            return 7
+        if 5 < col < 9:
+            return 8
+
+
 def is_house_unique(board, row):
     for col in range(9):
 

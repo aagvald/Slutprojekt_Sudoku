@@ -1,4 +1,5 @@
 import random
+from house_list_generator import create_house_list, identify_house_number, is_house_unique
 
 board = [
     [5,0,0,0,0,0,3,4,0],
@@ -23,10 +24,16 @@ def candidates_already_in_column(board,col):
     return false_candidates
 
 
+def candidates_already_in_house(board,row,col):
+    house_number = identify_house_number(row,col)
+    house = create_house_list(board)[house_number]
+    return house
+
+
 def candidate_requirements(board,row,col):
     cell_candidates = numbers
     for num in numbers:
-        if num in board[row] or num in candidates_already_in_column(board,col):
+        if num in board[row] or num in candidates_already_in_column(board,col) or num in candidates_already_in_house(board,row,col):
             cell_candidates = [x for x in cell_candidates if x != num]
     return cell_candidates
 
@@ -34,14 +41,11 @@ def candidate_requirements(board,row,col):
 def determine_candidates(board,row):
     candidate_list = []
     for col in range(9):
-        
         if board[row][col] > 0:
             cell_candidates = []
         else:
             cell_candidates = candidate_requirements(board,row,col)
-
         candidate_list.append(cell_candidates)
-
     return candidate_list
 
 
