@@ -1,5 +1,6 @@
 import random
 from candidate_check import determine_candidates
+from scout_candidates import house_list_candidates
 
 board = [
     [5,0,0,0,0,0,3,4,0],
@@ -15,5 +16,6 @@ board = [
 
 for row in board:
     print(row)
-    
+
 print(determine_candidates(board))
+print("\n" + str(house_list_candidates(board)))
