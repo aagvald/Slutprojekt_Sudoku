@@ -22,3 +22,15 @@ def candidate_removal(board,row,col):
         if num in board[row] or num in candidates_already_in_column(board,col) or num in candidates_already_in_house(board,row,col):
             cell_candidates = [x for x in cell_candidates if x != num]
     return cell_candidates
+
+
+def determine_candidates(board):
+    candidate_list = [[], [], [], [], [], [], [], [], []]
+    for row in range(9):
+        for col in range(9):
+            if board[row][col] > 0:
+                cell_candidates = []
+            else:
+                cell_candidates = candidate_removal(board,row,col)
+            candidate_list[row].append(cell_candidates)
+    return candidate_list

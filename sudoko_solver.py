@@ -1,5 +1,5 @@
 import random
-from candidate_check import candidate_removal
+from candidate_check import determine_candidates
 
 board = [
     [5,0,0,0,0,0,3,4,0],
@@ -12,18 +12,6 @@ board = [
     [6,0,0,5,0,0,0,0,0],
     [0,2,0,0,0,0,7,0,0],
 ]
-
-def determine_candidates(board):
-    candidate_list = [[], [], [], [], [], [], [], [], []]
-    for row in range(9):
-        for col in range(9):
-            if board[row][col] > 0:
-                cell_candidates = []
-            else:
-                cell_candidates = candidate_removal(board,row,col)
-            candidate_list[row].append(cell_candidates)
-    return candidate_list
-
 
 for row in board:
     print(row)
