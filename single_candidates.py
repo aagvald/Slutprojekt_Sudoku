@@ -52,6 +52,6 @@ def find_single_cand_in_col(board):
                 if num in candidate_list[row][col]:
                     digit_cand_count += 1
             
-            if digit_cand_count == 1:
+            if digit_cand_count == 2:
                 row_col_digit = [row, col, num]
                 return row_col_digit
