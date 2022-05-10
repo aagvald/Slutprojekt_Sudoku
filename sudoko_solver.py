@@ -18,6 +18,6 @@ board = [
 for row in board:
     print(row)
 
-print(determine_candidates(board)[8])
+print(determine_candidates(board)[8][1])
 print(find_single_cand_in_col(board))
 print(find_single_cand_in_house(board))
