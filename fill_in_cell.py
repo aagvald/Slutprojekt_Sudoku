@@ -30,9 +30,9 @@ def fill_single_cand_in_col(board):
 def fill_board(board):
     x = False
     while x == False:
-        fill_single_cand_in_house
-        fill_single_cand_in_row
-        fill_single_cand_in_col
+        find_single_cand_in_house
+        find_single_cand_in_row
+        find_single_cand_in_col
 
         empty_cells = 0
         for row in range(9):
