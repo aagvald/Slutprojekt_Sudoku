@@ -2,7 +2,7 @@ import random
 from decide_candidates import determine_candidates
 from single_candidates import house_list_candidates, find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
 from house_list_generator import identify_row, identify_col
-from fill_in_cell import fill_in_free_cell
+from fill_in_cell import fill_single_cand_in_house
 
 board = [
     [5,0,0,0,0,0,3,4,0],
@@ -20,7 +20,8 @@ for row in board:
     print(row)
 
 print("")
-fill_in_free_cell(board)
+fill_single_cand_in_house(board)
 
 for row in board:
     print(row)
+
