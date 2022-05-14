@@ -34,16 +34,9 @@ board = [
 
 for row in board:
     print(row)
+print("")
 
-print(find_single_cand_in_house(board))
+print(determine_candidates(board))
 #print(house_list_candidates(board)[8][1])
 #print(find_single_cand_in_house(board))
 #fill_single_cand_in_row(board)
-
-for row in board:
-    print(row)
-
-fill_board(board)
-
-for row in board:
-    print(row)
