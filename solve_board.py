@@ -38,3 +38,5 @@ def is_board_complete(board):
     else:
         return False
 
+
+#def fill_board(board):
