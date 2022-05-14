@@ -1,0 +1,2 @@
+from single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
+

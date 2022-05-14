@@ -25,6 +25,7 @@ def find_single_cand_in_house(board):
                 col = identify_col(house_cell_digit[0],house_cell_digit[1])
                 row_col_digit = [row, col, num]
                 return row_col_digit
+    return False
 
 
 def find_single_cand_in_row(board):
@@ -40,6 +41,7 @@ def find_single_cand_in_row(board):
             if len(digit_cand_count) == 1:
                 row_col_digit = digit_cand_count[0]
                 return row_col_digit
+    return False
 
 
 def find_single_cand_in_col(board):
@@ -55,3 +57,4 @@ def find_single_cand_in_col(board):
             if len(digit_cand_count) == 1:
                 row_col_digit = digit_cand_count[0]
                 return row_col_digit
+    return False
