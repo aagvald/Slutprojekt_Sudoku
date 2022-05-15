@@ -1,4 +1,5 @@
 import random
+from termios import FIOASYNC
 from decide_candidates import determine_candidates
 from single_candidates import house_list_candidates, find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
 from house_list_generator import identify_row, identify_col
@@ -42,5 +43,13 @@ for i in range(8):
 #print(find_single_cand_in_house(board))
 #fill_single_cand_in_row(board)
 
+#for row in board:
+    #print(row)
+
+#print(len(house_list_candidates(board)[0]))
+#print(find_single_cand_in_house(board))
+
+print("")
 for row in board:
     print(row)
+
