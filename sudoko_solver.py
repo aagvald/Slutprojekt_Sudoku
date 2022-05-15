@@ -1,6 +1,6 @@
 from decide_candidates import determine_candidates, house_list_candidates
 from find_single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
-from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, solve_sudoku, use_brute_force
+from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, solve_sudoku, is_board_solved
 from brute_forcing import first_empty_cell
 
 board = [
@@ -30,25 +30,26 @@ for row in board_1:
     print(row)
 
 print("")
-#solve_sudoku(board_1)
 
-fill_single_cand_in_house(board_1)
-fill_single_cand_in_col(board_1)
-fill_single_cand_in_row(board_1)
-for row in board_1:
-    print(row)
 
 
 #print(find_single_cand_in_house(board_1))
 
 
-print("")
+
 
 #print(first_empty_cell(board_1))
 
 #use_brute_force(board_1)
 
 solve_sudoku(board_1)
+
+for row in board_1:
+    print(row)
+
+is_board_solved(board_1)
+
+print("")
 
 for row in board_1:
     print(row)
