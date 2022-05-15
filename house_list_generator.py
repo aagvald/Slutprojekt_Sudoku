@@ -57,6 +57,32 @@ def identify_house_number(row,col):
             return 8
 
 
+def identify_cell_in_house(row,col):
+    if row == 0 or row == 3 or row == 6:
+        if col < 3:
+            return col
+        if 2 < col < 6:
+            return col - 3
+        if 5 < col < 9:
+            return col - 6
+        
+    if row == 1 or row == 4 or row == 7:
+        if col < 3:
+            return col + 3
+        if 2 < col < 6:
+            return col
+        if 5 < col < 9:
+            return col - 3
+        
+    if row == 2 or row == 5 or row == 8:
+        if col < 3:
+            return col + 6
+        if 2 < col < 6:
+            return col + 3
+        if 5 < col < 9:
+            return col
+
+
 def identify_row(house_number,cell_number):
     if house_number < 3:
         if cell_number < 3:
