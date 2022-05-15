@@ -4,6 +4,15 @@ from decide_candidates import determine_candidates, house_list_candidates
 
 numbers = [1,2,3,4,5,6,7,8,9]
 
+def empty_cells_left(board):
+    empty_cells = 0
+    for row in range(9):
+        for col in range(9):
+            if board[row][col] == 0:
+                empty_cells += 1
+    return empty_cells
+
+
 def first_empty_cell(board):
     for row in range(9):
         for col in range(9):

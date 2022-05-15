@@ -1,7 +1,8 @@
 from decide_candidates import determine_candidates, house_list_candidates
 from find_single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
-from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, solve_sudoku, is_board_solved
-from brute_forcing import first_empty_cell
+from fill_single_candidates import only_candidate
+from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, fill_board, solve_board
+from empty_cells import first_empty_cell
 
 board = [
     [5,0,0,0,0,0,3,4,0],
@@ -16,40 +17,22 @@ board = [
 ]
 
 board_1 = [
-    [0,0,7,0,0,0,0,4,0],
-    [5,0,0,0,0,0,0,9,3],
-    [0,4,0,0,6,2,0,0,1],
-    [0,0,0,2,0,7,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
-    [0,1,2,0,0,9,0,8,0],
-    [0,0,9,6,0,0,0,3,0],
-    [7,0,0,0,4,1,0,0,6],
-    [0,0,0,3,0,0,7,0,0],
+    [0,0,3,0,8,0,5,0,0],
+    [4,0,0,0,0,2,0,0,0],
+    [0,5,0,0,4,6,0,3,0],
+    [0,4,0,0,7,0,1,0,0],
+    [0,1,5,0,0,0,6,0,0],
+    [0,0,0,0,0,1,0,0,9],
+    [6,7,0,0,0,0,0,0,2],
+    [0,0,0,8,0,0,0,0,0],
+    [0,0,0,9,0,3,0,0,8],
 ]
 for row in board_1:
     print(row)
 
 print("")
 
-
-
-#print(find_single_cand_in_house(board_1))
-
-
-
-
-#print(first_empty_cell(board_1))
-
-#use_brute_force(board_1)
-
-solve_sudoku(board_1)
-
-for row in board_1:
-    print(row)
-
-is_board_solved(board_1)
-
-print("")
+fill_board(board_1)
 
 for row in board_1:
     print(row)
