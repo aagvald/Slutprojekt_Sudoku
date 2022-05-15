@@ -44,7 +44,6 @@ for row in board_1:
 
 print("")
 
-print(first_empty_cell(board_1))
 #print(first_empty_cell(board_1))
 
 use_brute_force(board_1)

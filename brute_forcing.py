@@ -12,3 +12,4 @@ def first_empty_cell(board):
                 cell_info = [row, col, cell_candidates]
                 return cell_info
 
+
