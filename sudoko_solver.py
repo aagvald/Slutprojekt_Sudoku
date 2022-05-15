@@ -47,7 +47,7 @@ print("")
 #print(first_empty_cell(board_1))
 
 #use_brute_force(board_1)
-board_1[0][0] = 2
+
 solve_sudoku(board_1)
 
 for row in board_1:

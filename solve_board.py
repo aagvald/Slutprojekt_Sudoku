@@ -11,19 +11,17 @@ def empty_cells_left(board):
 
 
 def solve_sudoku(board):
-    x = 0
     while True:
         if empty_cells_left(board) == 0:
             break
+        
         fill_single_cand_in_house(board)
-        
         fill_single_cand_in_row(board)
-        
         fill_single_cand_in_col(board)
 
-        x += 1
-    print(x)
-    return False
+        if empty_cells_left(board) > 0 and fill_single_cand_in_house(board) == False and fill_single_cand_in_row(board) == False and fill_single_cand_in_col(board) == False:
+            print(False)
+            return False
 
 
 
