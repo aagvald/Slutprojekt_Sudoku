@@ -1,9 +1,9 @@
 from fill_single_candidates import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, only_candidate
 from empty_cells import empty_cells_left, first_empty_cell
 import copy
+import random
 
 def fill_board(board):
-    x = 0
     while True:
         if empty_cells_left(board) == 0:
             break
@@ -13,18 +13,16 @@ def fill_board(board):
         fill_single_cand_in_col(board)
         only_candidate(board)
 
-        x += 1
-
         if empty_cells_left(board) > 0 and fill_single_cand_in_house(board) == False and fill_single_cand_in_row(board) == False and fill_single_cand_in_col(board) == False:
-            print(x)
             return False
     return True
         
 
-def solve_board(board):
+def solve_sudoku(board):
     test_board = copy.deepcopy(board)
     if fill_board(board) == True:
         return board
+
     if fill_board(board) == False:
 
         cell_info = first_empty_cell(board)
@@ -39,8 +37,15 @@ def solve_board(board):
                 return board
             else:
                 test_board = copy.deepcopy(board)
-            
 
-    
-    
-            
+#def try_cands(board):
+    #fill_board(board)
+
+    #cell_info = first_empty_cell(board)
+    #row = cell_info[0]
+    #col = cell_info[1]
+    #candidates = cell_info[2]
+    #num = random.choice(candidates)
+
+    #board[row][col] = num
+    #return num
