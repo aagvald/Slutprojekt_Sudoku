@@ -36,13 +36,19 @@ def fill_single_cand_in_col(board):
             board[row][col] = num
 
 
-def is_board_complete(board):
+def empty_cells_left(board):
     empty_cells = 0
     for row in range(9):
         for col in range(9):
             if board[row][col] == 0:
                 empty_cells += 1
-    if empty_cells == 0:
-        return True
-    else:
-        return False
+    return empty_cells
+
+
+def solve_sudoku(board):
+    while True:
+        if empty_cells_left(board) == 0:
+            break
+        fill_single_cand_in_house(board)
+        fill_single_cand_in_row(board)
+        fill_single_cand_in_col(board)
