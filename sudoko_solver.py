@@ -1,7 +1,7 @@
 from decide_candidates import determine_candidates, house_list_candidates
 from single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
 from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, solve_sudoku
-#from invisible_false_candidates import brute_force
+#from brute_forcing import brute_force
 
 board = [
     [5,0,0,0,0,0,3,4,0],
