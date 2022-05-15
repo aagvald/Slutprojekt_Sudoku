@@ -12,11 +12,3 @@ def first_empty_cell(board):
                 cell_info = [row, col, cell_candidates]
                 return cell_info
 
-
-def try_candidates(board):
-    cell_info = first_empty_cell(board)
-    candidates = cell_info[2]
-    for cand in candidates:
-        row = cell_info[0]
-        col = cell_info[1]
-        board[row][col] = cand

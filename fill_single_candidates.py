@@ -10,6 +10,7 @@ def fill_single_cand_in_house(board):
             col = row_col_num[1]
             num = row_col_num[2]
             board[row][col] = num
+    return False
 
 
 def fill_single_cand_in_row(board):
@@ -22,6 +23,7 @@ def fill_single_cand_in_row(board):
             col = row_col_num[1]
             num = row_col_num[2]
             board[row][col] = num
+    return False
 
 
 def fill_single_cand_in_col(board):
@@ -34,3 +36,4 @@ def fill_single_cand_in_col(board):
             col = row_col_num[1]
             num = row_col_num[2]
             board[row][col] = num
+    return False
