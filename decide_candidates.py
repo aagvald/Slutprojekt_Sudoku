@@ -34,3 +34,9 @@ def determine_candidates(board):
                 cell_candidates = candidate_removal(board,row,col)
             candidate_list[row].append(cell_candidates)
     return candidate_list
+
+
+def house_list_candidates(board):
+    candidate_list = determine_candidates(board)
+    house_cand_list = create_house_list(candidate_list)
+    return house_cand_list
