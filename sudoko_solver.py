@@ -1,3 +1,5 @@
+from decide_candidates import determine_candidates
+from single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
 from solve_board import solve_sudoku
 
 board = [
@@ -27,7 +29,7 @@ for row in board_1:
     print(row)
 
 print("")
-solve_sudoku(board_1)
-
+#solve_sudoku(board_1)
+print(find_single_cand_in_row(board_1))
 for row in board:
     print(row)
