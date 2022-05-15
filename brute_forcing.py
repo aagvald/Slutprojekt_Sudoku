@@ -13,4 +13,6 @@ def first_empty_cell(board):
                 return cell_info
 
 
-#def
+def try_candidates(board):
+    cell_info = first_empty_cell(board)
+    #for cand in cell_info[2]:

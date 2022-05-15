@@ -44,10 +44,10 @@ for row in board_1:
 
 print("")
 
-print(first_empty_cell(board_1))
+#print(first_empty_cell(board_1))
 
 
-#solve_sudoku(board_1)
+solve_sudoku(board_1)
 
-#for row in board_1:
-    #print(row)
+for row in board_1:
+    print(row)

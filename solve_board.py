@@ -52,3 +52,4 @@ def solve_sudoku(board):
         fill_single_cand_in_house(board)
         fill_single_cand_in_row(board)
         fill_single_cand_in_col(board)
+
