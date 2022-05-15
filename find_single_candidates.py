@@ -1,4 +1,4 @@
-from house_list_generator import create_house_list, identify_row, identify_col
+from house_list_generator import identify_row, identify_col
 from decide_candidates import determine_candidates, house_list_candidates
 
 numbers = [1,2,3,4,5,6,7,8,9]

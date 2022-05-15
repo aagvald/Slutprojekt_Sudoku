@@ -1,5 +1,5 @@
 from decide_candidates import determine_candidates, house_list_candidates
-from single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
+from find_single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
 from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, solve_sudoku
 from brute_forcing import first_empty_cell
 
@@ -46,7 +46,7 @@ print("")
 
 #print(first_empty_cell(board_1))
 
-
+board_1[0][0] = 2
 solve_sudoku(board_1)
 
 for row in board_1:

@@ -15,4 +15,8 @@ def first_empty_cell(board):
 
 def try_candidates(board):
     cell_info = first_empty_cell(board)
-    #for cand in cell_info[2]:
+    candidates = cell_info[2]
+    for cand in candidates:
+        row = cell_info[0]
+        col = cell_info[1]
+        board[row][col] = cand
