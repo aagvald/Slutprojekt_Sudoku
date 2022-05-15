@@ -46,7 +46,7 @@ for i in range(8):
 #for row in board:
     #print(row)
 
-#print(len(house_list_candidates(board)[0]))
+print(house_list_candidates(board))
 #print(find_single_cand_in_house(board))
 
 print("")
