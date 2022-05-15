@@ -39,13 +39,13 @@ for row in board_1:
 
 
 print("")
-print(find_single_cand_in_col(board_1))
-fill_single_cand_in_col(board_1)
+#print(find_single_cand_in_house(board_1))
+print(determine_candidates(board_1))
 
 
 
 
 
 
-for row in board_1:
-    print(row)
+
+
