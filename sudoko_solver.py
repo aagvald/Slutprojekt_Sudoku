@@ -1,6 +1,6 @@
 from decide_candidates import determine_candidates
 from single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col
-from solve_board import solve_sudoku
+from solve_board import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, solve_sudoku
 
 board = [
     [5,0,0,0,0,0,3,4,0],
@@ -30,6 +30,22 @@ for row in board_1:
 
 print("")
 #solve_sudoku(board_1)
-print(find_single_cand_in_row(board_1))
-for row in board:
+
+fill_single_cand_in_house(board_1)
+fill_single_cand_in_col(board_1)
+fill_single_cand_in_row(board_1)
+for row in board_1:
+    print(row)
+
+
+print("")
+print(find_single_cand_in_col(board_1))
+fill_single_cand_in_col(board_1)
+
+
+
+
+
+
+for row in board_1:
     print(row)
