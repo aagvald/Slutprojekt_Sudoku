@@ -1,7 +1,6 @@
 from fill_single_candidates import fill_single_cand_in_house, fill_single_cand_in_row, fill_single_cand_in_col, only_candidate
 from empty_cells import empty_cells_left, first_empty_cell
 import copy
-import random
 
 def fill_board(board):
     while True:
