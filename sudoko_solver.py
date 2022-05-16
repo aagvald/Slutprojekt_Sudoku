@@ -26,10 +26,8 @@ board_1 = [
 
 for row in board_1:
     print(row)
-
 print("")
 
 board_1 = solve_sudoku(board_1)
-
 for row in board_1:
     print(row)

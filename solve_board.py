@@ -23,7 +23,6 @@ def solve_sudoku(board):
         return board
 
     if fill_board(board) == False:
-
         cell_info = first_empty_cell(board)
         row = cell_info[0]
         col = cell_info[1]

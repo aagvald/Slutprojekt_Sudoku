@@ -36,6 +36,7 @@ def fill_single_cand_in_col(board):
         board[row][col] = num
         return True
 
+
 def only_candidate(board):
     candidate_list = determine_candidates(board)
     for row in range(9):
