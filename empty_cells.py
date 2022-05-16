@@ -20,5 +20,3 @@ def first_empty_cell(board):
             if len(cell_candidates) > 0:
                 cell_info = [row, col, cell_candidates]
                 return cell_info
-
-

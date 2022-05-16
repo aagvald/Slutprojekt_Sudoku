@@ -37,15 +37,3 @@ def solve_sudoku(board):
                 return board
             else:
                 test_board = copy.deepcopy(board)
-
-#def try_cands(board):
-    #fill_board(board)
-
-    #cell_info = first_empty_cell(board)
-    #row = cell_info[0]
-    #col = cell_info[1]
-    #candidates = cell_info[2]
-    #num = random.choice(candidates)
-
-    #board[row][col] = num
-    #return num

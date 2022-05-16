@@ -45,4 +45,4 @@ def only_candidate(board):
                 board[row][col] = num
                 return True
     return False
-                
+    
