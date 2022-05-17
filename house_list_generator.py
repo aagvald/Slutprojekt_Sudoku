@@ -1,3 +1,4 @@
+#Anpassar hela board till husstrukturen så att de är enkla att genomsöka
 def create_house_list(board):
     house_list = [[], [], [], [], [], [], [], [], []]
     
@@ -30,7 +31,7 @@ def create_house_list(board):
     
     return house_list
 
-
+#Identifierar vilket hus en viss plats befinner sig i
 def identify_house_number(row,col):
     if row < 3:
         if col < 3:
@@ -56,7 +57,7 @@ def identify_house_number(row,col):
         if 5 < col < 9:
             return 8
 
-
+#Identifierar vilken rad en viss plats i ett hus befinner sig på
 def identify_row(house_number,cell_number):
     if house_number < 3:
         if cell_number < 3:
@@ -82,7 +83,7 @@ def identify_row(house_number,cell_number):
         if 5 < cell_number < 9:
             return 8
 
-
+#Identifierar vilken kolumn en viss plats i ett hus befinner sig i
 def identify_col(house_number,cell_number):
     if house_number == 0 or house_number == 3 or house_number == 6:
         if cell_number < 3:

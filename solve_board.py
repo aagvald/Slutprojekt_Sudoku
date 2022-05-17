@@ -16,7 +16,7 @@ def fill_board(board):
         if empty_cells_left(board) > 0 and find_single_cand_in_house(board) == False and find_single_cand_in_row(board) == False and find_single_cand_in_col(board) == False and only_candidate(board) == False:
             return False
     return True
-        
+
 #Chansar på kandidatsiffror i första tomma platsen och kollar om detta löser hela board
 def solve_sudoku(board):
     test_board = copy.deepcopy(board)
