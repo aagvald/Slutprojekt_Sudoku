@@ -1,4 +1,4 @@
-from find_single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col, only_candidate
+from find_and_fill_single_candidates import find_single_cand_in_house, find_single_cand_in_row, find_single_cand_in_col, only_candidate
 from empty_cells import empty_cells_left, first_empty_cell
 import copy
 
