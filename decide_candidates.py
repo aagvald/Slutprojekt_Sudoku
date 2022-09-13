@@ -2,7 +2,7 @@ from house_list_generator import create_house_list, identify_house_number
 
 numbers = [1,2,3,4,5,6,7,8,9]
 
-#Bestämmer siffro som redan finns i samma kolumn
+#Bestämmer siffror som redan finns i samma kolumn
 def candidates_already_in_column(board,col):
     false_candidates = []
     for other_row in range(9):
